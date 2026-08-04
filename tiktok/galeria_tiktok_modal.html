@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Galeria TikTok</title>
+
+<style>
+body {
+    font-family: Arial;
+    background:#111;
+    padding:20px;
+    color:white;
+}
+
+h1 { text-align:center; }
+
+.galeria {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+    gap:15px;
+}
+
+.video {
+    overflow:hidden;
+    border-radius:10px;
+    transition:0.3s;
+    text-align:center;
+    cursor:pointer;
+}
+
+.video img {
+    width:100%;
+    display:block;
+    border-radius:10px;
+}
+
+.numero {
+    background: blue;
+    color: white;
+    padding: 5px 0;
+    margin-top: 5px;
+    font-weight: bold;
+    border-radius: 0 0 10px 10px;
+}
+
+.video:hover {
+    transform:scale(1.05);
+}
+
+.modal {
+    font-size: 51px;
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.modal a, .modal h3 {
+    width:50vw;
+    max-width:600px;
+}
+
+.modal a {
+    color:white;
+    margin:5px;
+    display:block;
+}
+
+.close {
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:30px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>Galeria TikTok</h1>
+
+<div class="galeria">
+<div class='video' onclick="openModal('https://www.tiktok.com/@jackinthemud/video/7667472024448601364','jackinthemud%20jackinthemud','jackinthemud','jackinthemud')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/o8Q3ABqEsAiCgVLfBwxoYU1RVBKxNAjriI3BAc~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=akJUa3iPu3EWXhLEmJiFyQuAUfY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>1</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@jonathanmotaa/video/7639532170268134677','Jonathan%20Mota%20jonathanmotaa','JonathanMota','jonathanmotaa')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oAPIDAcDqCEl6JrFEAAR7AEyEBfFfB8gKRIgAP~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=U0IdCBfrkwhaJ8rqd1RA19Bkcog%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>2</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@guedeaoficial/video/7656125606676925726','guedeaoficial%20guedeaoficial','guedeaoficial','guedeaoficial')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast8-p-0068-tx2/oAEs21QAVTAFQEACyLRAuQfFCTDeEBdQKQ4qOA~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=tpa%2FmooVNiN5AlritHpad04onow%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>3</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@concurseiro.determinado/video/7659216871924813074','Concurseiro%20Determinado%20concurseiro.determinado','ConcurseiroDeterminado','concurseiro.determinado')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/ocAMl0SsAfN0IfJiLfAC6IQGVAZgVAoTe8eW0h~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=o1k5zJ9lTg2zAK%2FJFBZMX1HKnDQ%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>4</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@cerqueiraworkout/video/7666255956837256466','Caio%20Barbaglio%20Cerqueira%20cerqueiraworkout','CaioBarbaglioCerqueira','cerqueiraworkout')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/ocBEEAUrEFANHZAgIRKDcx3ZAXAAMfqkNBEfCz~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=xO7%2BgTM5nVtzAhOj8%2BWcnAMHu80%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>5</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@hayden_.monteleone/video/7661345498736889101','Hayden%20Monteleone%20hayden_.monteleone','HaydenMonteleone','hayden_.monteleone')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast5-p-0068-tx/oIyDEnD3FV4OUIlLgRzgAB5ELwKQQSGfgqpgeE~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=BNwDajVSPtS1xQHdPwUCqMCTsE8%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>6</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@dudufitt/video/7667665594749111573','dudufit%20dudufitt','dudufit','dudufitt')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oYBQqBInUADlgAAgECBCC4ep1UFSVaHEEAZifA~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=JMzBsA4T8PSTRHQcF2Es2e9Dxfk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>7</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@imnotlucasvit/video/7659131518475980039','Lucas%20Vitorino%20imnotlucasvit','LucasVitorino','imnotlucasvit')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oEGvEXCqBgAIyBR5AEo3fABAK8lDSF4NrUfsXE~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=OmkVq8EYE8oj9xzV1lOZKEoByJo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>8</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@carlosdanielmarti743/video/7668268724440337671','Daniel%20Mart%C3%ADn..%20carlosdanielmarti743','DanielMartn..','carlosdanielmarti743')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/ok4C1ScALlYGswPfDnyj6neNIeDLWUIUAQWQYO~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=oWxCqFR9GmVs%2Bc2CU%2F9x0ESg2hM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>9</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@dibarrosss/video/7667639950149520653','Diego%20Barros%20dibarrosss','DiegoBarros','dibarrosss')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast5-p-0068-tx/osR4zFBRSDqzaGE33g3SAQANIfamgXDEfAQmOC~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=3KsR%2B0p%2Fih977uKJ6MxT1On2JZw%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>10</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@kaiomcr1/video/7668393029371432213','Kaio%20Murilo%20kaiomcr1','KaioMurilo','kaiomcr1')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oktERf5rkgsRDqQIER0EAXBcmBaFIFHuqfo3gl~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=ONTtwP5XgsXoDIl2ooZjmwHOcEk%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>11</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@leogallonutri/video/7668327954677517586','Nutrileogallofit%20leogallonutri','Nutrileogallofit','leogallonutri')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oQxFeEB4IQRc99mvHf58rI16q7kXaDavaFEgAB~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=OiSgujH%2BNnk21w%2F0XwGgPFM4uJU%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>12</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@manuelanthonyr.f/video/7668086613611678989','Manuel%20Rodr%C3%ADguez%20manuelanthonyr.f','ManuelRodrguez','manuelanthonyr.f')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast5-p-0068-tx/ogoBHQNftq8qFDAeIQEQRh3DgETESFBXAYasIM~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=N7bv6%2BMovzzsKJFlvtth%2FuYh2eM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>13</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@mr.algumacapy/video/7661348008772095253','capy%20mr.algumacapy','capy','mr.algumacapy')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oAPAxiTIBAASiIc8loE3BaYko3AlEBAlZBoK1~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=zJvbF05cErD25ZlomGQCpXAV2lc%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>14</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@mosesacervantes/video/7653271708194852126','Moses%20mosesacervantes','Moses','mosesacervantes')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast8-p-0068-tx2/okAf4eHJDIAi210IA1FAqwjhDEf7UAIEEkA6Ia~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=Jralip2HCtFKrbXA0hidEDuEY1M%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>15</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@lifts.gabe.21/video/7654959070742383886','Gabe.Freeman%20lifts.gabe.21','Gabe.Freeman','lifts.gabe.21')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast5-p-0068-tx/okCLJDAQaTFeHfafIAs3OkUYwpj5dAgIEQvCGp~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=zahBGqfPybqv%2BuVUfwUVrpalh8c%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>16</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@piombo/video/7662518701442256141','Piombo%20piombo','Piombo','piombo')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast5-p-0068-tx/oQZvUVzEABulW77QiI4CT6avBEImKg24wiWAa~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=Uh%2FxRHMtYemwiyt5eDZXMWmnUYo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>17</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@rafa.lopesfit/video/7668280729700158728','rafa.lopesfit%20rafa.lopesfit','rafa.lopesfit','rafa.lopesfit')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oYvrjmqYUQofIQDoNC1FxpkEQFDGs3APeAfCLk~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=iSfX33JUEZX58t%2FwqeZsbGLtLAM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>18</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@paulovcfitness/video/7647887321378983176','Paulovcfitness%20paulovcfitness','Paulovcfitness','paulovcfitness')"><img src='https://p19-common-sign.tiktokcdn.com/tos-alisg-p-0037/oUABAQsiQaqIfCDAiADs9EE9cIwREEFgASeE0x~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=cz2Ok3Gg4sx5QTe%2FrSxqZo2s0TY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>19</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@ratao595/video/7663591691940662546','Ratu%20ratao595','Ratu','ratao595')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/osIaX1HUiKYUAiyRUBuIqwAjc17LAlB2CICfIM~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=1ORDLUn3SyS6z%2BuD2GfeKkLmdFY%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>20</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@thekingofiagos/video/7666143756407655688','iago%20thekingofiagos','iago','thekingofiagos')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oMIBOARSAzAIiAS1wcKii6nMEB1fRAOjSwBnCy~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=4rdGvfMPhOrAn9lRh4Dl2lSeI9E%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>21</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@reyvajfit/video/7650156716515953942','Javier%20Albes%20Martinez%20reyvajfit','JavierAlbesMartinez','reyvajfit')"><img src='https://p16-common-sign.tiktokcdn.com/tos-no1a-p-0037-no/oUrqRtOSqQkmEeF70BKFxUAEQiDHZnAg0gfJQN~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=wyYE93KxALofN5raE4OGr9TdSZI%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>22</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@trainertrevvv/video/7667833199464156430','Trainertrevvv%20trainertrevvv','Trainertrevvv','trainertrevvv')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast5-p-0068-tx/okRB1FDRD3gfNeaBdqsTAJSpN4IEImQBDZnYEg~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=4HfYWvSy4JRItMHpnOJnkjgijBg%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>23</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@vanfilli/video/7667414534042176782','Van%20vanfilli','Van','vanfilli')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast5-p-0068-tx/oMrBiAVFBC26zVBoIBxPifu6pINC1IAwKBcIwI~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=n91XnKG4JCm1NrJ6P03C4eOtYwo%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>24</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@samuel.ferreira528/video/7663869183230283029','Samuquinha%20samuel.ferreira528','Samuquinha','samuel.ferreira528')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/owf1D5eGoIeKjqUIyE3mit7w3CNAYI9aLCuxQA~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=TvLyeuWAdsJasVTs0uLRdeElQcM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>25</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@vitorborges9365/video/7662816651963927829','Vitorborges1%20vitorborges9365','Vitorborges1','vitorborges9365')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oAxAkL1IXDbBRAVywIuyfPiqiCAIpCK40YEP2I~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=LyIvhmlTO7ye7DVhJgJpuIoVwT0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>26</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@vinimaiochi/video/7667361857354665223','vinimaiochi%20vinimaiochi','vinimaiochi','vinimaiochi')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/o0InIBGdG8AnAlDpMFJkfozubFrRfE8AweeQFg~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=nDOM7vZioXmGwJZHZ9GZ9vggtYM%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>27</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@wilsonbarross/video/7666667586892860693','Wil%20wilsonbarross','Wil','wilsonbarross')"><img src='https://p16-common-sign.tiktokcdn.com/tos-alisg-p-0037/oEqFOEoGUC81yf0LIHOvgAQ4IDeKeyjAljQyT7~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=2Bu%2Bmg96smpQtGjdvUCmn2B3f%2F0%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>28</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@pedrovazquez1699/video/7650642292361022738','Pedro%20VZ%20pedrovazquez1699','PedroVZ','pedrovazquez1699')"><img src='https://p19-common-sign.tiktokcdn.com/tos-alisg-p-0037/oktqIUsYnDAUFAAeAIFyBRqABEjgLCELQtftZE~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=G2IXgbO6FE1xqHMRRnsl%2BSf61EE%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>29</div></div><div class='video' onclick="openModal('https://www.tiktok.com/@zamdrian/video/7657012642590067998','Adrian%20zamdrian','Adrian','zamdrian')"><img src='https://p16-common-sign.tiktokcdn.com/tos-useast8-p-0068-tx2/oEqChKlAdlZDhbgoEZ4jIffdIVIFDLEUAIEIfK~tplv-tiktokx-origin.image?dr=14575&x-expires=1786046400&x-signature=ate4%2BB86s39xtq3BNh0AMN0N9Ns%3D&t=4d5b0474&ps=13740610&shp=81f88b70&shcp=43f4a2f9&idc=my3'/><div class='numero'>30</div></div>
+</div>
+
+<div id="modal" class="modal">
+    <div class="close" onclick="closeModal()">X</div>
+
+    <a id="videoLink" target="_blank">Abrir vídeo</a>
+
+    <h3>Pesquisar:</h3>
+author-name= <span id="authorName"></span><br>
+author_id= <span id="authorId"></span><br>
+    <a id="google" target="_blank">Google</a>
+    <a id="bing" target="_blank">Bing</a>
+    <a id="duck" target="_blank">DuckDuckGo</a>
+    <a id="youtube" target="_blank">YouTube</a>
+    <a id="tiktok" target="_blank">TikTok</a>
+
+    <!-- ✅ INSTAGRAM AGORA EM DOIS LINKS -->
+    <a id="instagram-a" target="_blank">Insta(Author)</a>
+    <a id="instagram-b" target="_blank">Insta(Author ID)</a>
+    <a id="face-a" target="_blank">face(Author)</a>
+</div>
+
+<script>
+
+function sanitize(text){
+    return encodeURIComponent(String(text || "").replace(/\s+/g,'').trim());
+}
+
+function openModal(url, query, author, author_id){
+    document.getElementById('modal').style.display='flex';
+
+    document.getElementById('videoLink').href=url;
+
+    document.getElementById('google').href="https://google.com/search?q="+query;
+    document.getElementById('bing').href="https://bing.com/search?q="+query;
+    document.getElementById('duck').href="https://duckduckgo.com/?q="+query;
+    document.getElementById('youtube').href="https://youtube.com/results?search_query="+query;
+    document.getElementById('tiktok').href="tiktok://search?keyword="+query;
+
+    let a = sanitize(author);
+    let b = sanitize(author_id);
+
+    // INSTAGRAM 1
+    document.getElementById('instagram-a').href =
+        "https://www.instagram.com/explore/tags/" + a + "/";
+    // FACE 1
+    document.getElementById('face-a').href =
+        "https://www.facebook.com/watch/search/?q=" + a ;
+
+    // INSTAGRAM 2
+    document.getElementById('instagram-b').href =
+        "https://www.instagram.com/explore/tags/" + b + "/";
+document.getElementById('authorName').textContent = author;
+document.getElementById('authorId').textContent = author_id;
+}
+
+function closeModal(){
+    document.getElementById('modal').style.display='none';
+}
+
+document.getElementById('modal').onclick=function(e){
+    if(e.target===this) closeModal();
+};
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Minhas páginas</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+    color: blue;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Minhas páginas HTML</h1>
+
+<div id="lista">
+Carregando páginas...
+</div>
+
+
+<script>
+
+const usuario = "fn-nunes";
+const repositorio = "massage";
+const lista = document.getElementById("lista");
+
+// Função recursiva para buscar arquivos na raiz e subpastas
+async function carregarArquivos(path = "") {
+    try {
+        const resposta = await fetch(`https://api.github.com/repos/${usuario}/${repositorio}/contents/${path}`);
+        const itens = await resposta.json();
+
+        if (!Array.isArray(itens)) return;
+
+        for (const item of itens) {
+            if (item.type === "dir") {
+                // Se for uma subpasta, chama a função novamente passando o caminho dela
+                await carregarArquivos(item.path);
+            } else if (
+                item.name.endsWith(".html") &&
+                item.path !== "index.html"
+            ) {
+                // Se for um arquivo HTML (exceto o index principal)
+                const link = document.createElement("a");
+
+                // item.path garante que o link aponte para o caminho correto (ex: pasta/pagina.html)
+                link.href = item.path;
+                link.textContent = item.path;
+
+                // Abrir em nova aba
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+
+                lista.appendChild(link);
+            }
+        }
+    } catch (erro) {
+        console.error("Erro ao carregar:", erro);
+    }
+}
+
+// Inicia o processo limpando a mensagem de carregamento e chamando a função
+async function iniciar() {
+    lista.innerHTML = "";
+    await carregarArquivos();
+    
+    // Caso nenhum arquivo seja encontrado
+    if (lista.innerHTML === "") {
+        lista.innerHTML = "Nenhuma página encontrada.";
+    }
+}
+
+iniciar();
+
+</script>
+
+</body>
+
+</html>
