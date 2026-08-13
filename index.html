@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas páginas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 4px;
+        }
+
+        a {
+            display: block;
+            margin: 1px 0;
+            color: blue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .erro {
+            color: red;
+        }
+
+        /* Estilo para destacar o nome do diretório em vermelho e negrito */
+        .diretorio-nome {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Minhas páginas HTML</h1>
+
+    <div id="lista">
+        Carregando páginas...
+    </div>
+
+    <script>
+        const usuario = "fn-nunes";
+        const repositorio = "massage";
+        const lista = document.getElementById("lista");
+
+        async function carregarArquivos(path = "") {
+            try {
+                const url = `https://api.github.com/repos/${usuario}/${repositorio}/contents/${path}`;
+                const resposta = await fetch(url);
+                
+                if (!resposta.ok) {
+                    throw new Error(`Erro na API: ${resposta.status} (${resposta.statusText})`);
+                }
+
+                const itens = await resposta.json();
+
+                if (!Array.isArray(itens)) return;
+
+                // Arrays para separar os arquivos do primeiro nível e os diretórios/subpastas
+                let arquivosPrimeiroNivel = [];
+                let subpastas = [];
+
+                for (const item of itens) {
+                    if (item.type === "dir") {
+                        subpastas.push(item);
+                    } else if (
+                        // MUDANÇA: Removido o filtro item.name.endsWith(".html") e mantido apenas para ignorar o próprio index.html da raiz se necessário
+                        item.path !== "index.html" &&
+                        !item.path.includes("/") // Garante que é do primeiro nível da raiz
+                    ) {
+                        arquivosPrimeiroNivel.push(item);
+                    }
+                }
+
+                // Renderiza os arquivos que estão no primeiro nível do diretório no início do HTML
+                if (path === "" && arquivosPrimeiroNivel.length > 0) {
+                    const tituloRaiz = document.createElement("div");
+                    tituloRaiz.className = "diretorio-nome";
+                    tituloRaiz.textContent = "Raiz do Repositório";
+                    lista.appendChild(tituloRaiz);
+
+                    const olRaiz = document.createElement("ol");
+                    for (const arquivo of arquivosPrimeiroNivel) {
+                        const li = document.createElement("li");
+                        const link = document.createElement("a");
+                        link.href = `/${repositorio}/${arquivo.path}`;
+                        // Exibe apenas o nome do arquivo, sem repetir o caminho completo
+                        link.textContent = arquivo.name;
+                        link.target = "_blank";
+                        link.rel = "noopener noreferrer";
+                        li.appendChild(link);
+                        olRaiz.appendChild(li);
+                    }
+                    lista.appendChild(olRaiz);
+                }
+
+                for (const item of itens) {
+                    if (item.type === "dir") {
+                        // Cria o elemento para exibir o nome do diretório em cor vermelha e negrito
+                        const dirNome = document.createElement("div");
+                        dirNome.className = "diretorio-nome";
+                        dirNome.textContent = item.name;
+                        lista.appendChild(dirNome);
+
+                        // Cria a lista numérica ordenada (<ol>) para os arquivos de dentro do diretório
+                        const ol = document.createElement("ol");
+                        lista.appendChild(ol);
+
+                        // Função auxiliar interna ou lógica para buscar arquivos dentro da pasta e adicionar na lista ordenada
+                        const subResposta = await fetch(`https://api.github.com/repos/${usuario}/${repositorio}/contents/${item.path}`);
+                        if (subResposta.ok) {
+                            const subItens = await subResposta.json();
+                            if (Array.isArray(subItens)) {
+                                for (const subItem of subItens) {
+                                    if (
+                                        subItem.type === "file" &&
+                                        // MUDANÇA: Removido o filtro item.name.endsWith(".html") para aceitar qualquer extensão de arquivo
+                                        subItem.path !== "index.html"
+                                    ) {
+                                        const li = document.createElement("li");
+                                        const link = document.createElement("a");
+                                        link.href = `/${repositorio}/${subItem.path}`; // Caminho absoluto para garantir que abra certo no GitHub Pages
+                                        // Exibe apenas o nome do arquivo, sem repetir o caminho completo
+                                        link.textContent = subItem.name;
+                                        link.target = "_blank";
+                                        link.rel = "noopener noreferrer";
+
+                                        li.appendChild(link);
+                                        ol.appendChild(li);
+                                    }
+                                }
+                            }
+                        }
+
+                        // Recursividade para entrar nas pastas caso haja subdiretórios
+                        await carregarArquivos(item.path);
+                    }
+                }
+            } catch (erro) {
+                console.error("Erro ao carregar:", erro);
+                throw erro;
+            }
+        }
+
+        async function iniciar() {
+            lista.innerHTML = "";
+            try {
+                await carregarArquivos();
+                
+                if (lista.innerHTML.trim() === "") {
+                    lista.innerHTML = "Nenhum arquivo encontrado.";
+                }
+            } catch (erro) {
+                lista.innerHTML = `<span class="erro">Falha ao carregar a lista de páginas. Verifique o console ou limites da API do GitHub.<br><br>Detalhes: ${erro.message}</span>`;
+            }
+        }
+
+        iniciar();
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas páginas</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 4px;
+        }
+
+        a {
+            display: block;
+            margin: 1px 0;
+            color: blue;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .erro {
+            color: red;
+        }
+
+        /* Estilo para destacar o nome do diretório em vermelho e negrito */
+        .diretorio-nome {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Minhas páginas HTML</h1>
+
+    <div id="lista">
+        Carregando páginas...
+    </div>
+
+    <script>
+        const usuario = "fn-nunes";
+        const repositorio = "massage";
+        const lista = document.getElementById("lista");
+
+        async function carregarArquivos(path = "") {
+            try {
+                const url = `https://api.github.com/repos/${usuario}/${repositorio}/contents/${path}`;
+                const resposta = await fetch(url);
+                
+                if (!resposta.ok) {
+                    throw new Error(`Erro na API: ${resposta.status} (${resposta.statusText})`);
+                }
+
+                const itens = await resposta.json();
+
+                if (!Array.isArray(itens)) return;
+
+                // Arrays para separar os arquivos do primeiro nível e os diretórios/subpastas
+                let arquivosPrimeiroNivel = [];
+                let subpastas = [];
+
+                for (const item of itens) {
+                    if (item.type === "dir") {
+                        subpastas.push(item);
+                    } else if (
+                        item.name.endsWith(".html") &&
+                        item.path !== "index.html" &&
+                        !item.path.includes("/") // Garante que é do primeiro nível da raiz
+                    ) {
+                        arquivosPrimeiroNivel.push(item);
+                    }
+                }
+
+                // Renderiza os arquivos que estão no primeiro nível do diretório no início do HTML
+                if (path === "" && arquivosPrimeiroNivel.length > 0) {
+                    const tituloRaiz = document.createElement("div");
+                    tituloRaiz.className = "diretorio-nome";
+                    tituloRaiz.textContent = "Raiz do Repositório";
+                    lista.appendChild(tituloRaiz);
+
+                    const olRaiz = document.createElement("ol");
+                    for (const arquivo of arquivosPrimeiroNivel) {
+                        const li = document.createElement("li");
+                        const link = document.createElement("a");
+                        link.href = `/${repositorio}/${arquivo.path}`;
+                        // Exibe apenas o nome do arquivo, sem repetir o caminho completo
+                        link.textContent = arquivo.name;
+                        link.target = "_blank";
+                        link.rel = "noopener noreferrer";
+                        li.appendChild(link);
+                        olRaiz.appendChild(li);
+                    }
+                    lista.appendChild(olRaiz);
+                }
+
+                for (const item of itens) {
+                    if (item.type === "dir") {
+                        // Cria o elemento para exibir o nome do diretório em cor vermelha e negrito
+                        const dirNome = document.createElement("div");
+                        dirNome.className = "diretorio-nome";
+                        dirNome.textContent = item.name;
+                        lista.appendChild(dirNome);
+
+                        // Cria a lista numérica ordenada (<ol>) para os arquivos de dentro do diretório
+                        const ol = document.createElement("ol");
+                        lista.appendChild(ol);
+
+                        // Função auxiliar interna ou lógica para buscar arquivos dentro da pasta e adicionar na lista ordenada
+                        const subResposta = await fetch(`https://api.github.com/repos/${usuario}/${repositorio}/contents/${item.path}`);
+                        if (subResposta.ok) {
+                            const subItens = await subResposta.json();
+                            if (Array.isArray(subItens)) {
+                                for (const subItem of subItens) {
+                                    if (
+                                        subItem.type === "file" &&
+                                        subItem.name.endsWith(".html") &&
+                                        subItem.path !== "index.html"
+                                    ) {
+                                        const li = document.createElement("li");
+                                        const link = document.createElement("a");
+                                        link.href = `/${repositorio}/${subItem.path}`; // Caminho absoluto para garantir que abra certo no GitHub Pages
+                                        // Exibe apenas o nome do arquivo, sem repetir o caminho completo
+                                        link.textContent = subItem.name;
+                                        link.target = "_blank";
+                                        link.rel = "noopener noreferrer";
+
+                                        li.appendChild(link);
+                                        ol.appendChild(li);
+                                    }
+                                }
+                            }
+                        }
+
+                        // Recursividade para entrar nas pastas caso haja subdiretórios
+                        await carregarArquivos(item.path);
+                    }
+                }
+            } catch (erro) {
+                console.error("Erro ao carregar:", erro);
+                throw erro;
+            }
+        }
+
+        async function iniciar() {
+            lista.innerHTML = "";
+            try {
+                await carregarArquivos();
+                
+                if (lista.innerHTML.trim() === "") {
+                    lista.innerHTML = "Nenhuma página HTML encontrada (além do index).";
+                }
+            } catch (erro) {
+                lista.innerHTML = `<span class="erro">Falha ao carregar a lista de páginas. Verifique o console ou limites da API do GitHub.<br><br>Detalhes: ${erro.message}</span>`;
+            }
+        }
+
+        iniciar();
+    </script>
+
+</body>
+</html>
+-->
