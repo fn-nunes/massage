@@ -1,0 +1,516 @@
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <title>Árvore Agrupada e Copiável</title>
+    <style>
+        body { background: #111827; color: #e5e7eb; font-family: Arial, sans-serif; padding: 30px; }
+        h1 { color: #60a5fa; }
+        .arquivo { cursor: pointer; color: #e5e7eb; }
+        .arquivo:hover { color: #60a5fa; text-decoration: underline; }
+        .arquivo-copiado { color: #ef4444 !important; font-weight: bold !important; }
+        .tipo-cabecalho { cursor: pointer; }
+        .tipo-cabecalho:hover { color: #60a5fa; text-decoration: underline; }
+        .grupo-tipo { margin-bottom: 20px; }
+        .grupo-tipo h2 { color: #34d399; font-size: 18px; border-bottom: 1px solid #374151; }
+        .grupo-tipo ul { list-style-type: none; }
+        .lista-pastas-ordenada { list-style-type: decimal; }
+        .pasta-agrupada { color: #ef4444; font-weight: bold; cursor: pointer; margin-top: 5px; }
+        .pasta-agrupada:hover { color: #f87171; text-decoration: underline; }
+        #alerta-copia { position: fixed; top: 20px; right: 20px; background: #34d399; color: #000; padding: 15px; border-radius: 6px; display: none; }
+    </style>
+</head>
+<body><ol>
+    <h1>📂 Árvore Agrupada e Copiável</h1>
+    <div id="alerta-copia">Copiado!</div>
+    
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .deb - 64 arquivo(s) (Tamanho total: 6.61 GB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/softmaker-freeoffice-2024_1224-01_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">159.97 MB - softmaker-freeoffice-2024_1224-01_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/rclone-v1.70.3-linux-amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">24.18 MB - rclone-v1.70.3-linux-amd64.deb</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/wps-office_11.1.0.11723.XA_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">304.12 MB - wps-office_11.1.0.11723.XA_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/onlyoffice-desktopeditors_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">198.73 MB - onlyoffice-desktopeditors_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/microsoft-edge-stable_125.0.2535.79-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">160.09 MB - microsoft-edge-stable_125.0.2535.79-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/wavebox_10.125.28-2_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">155.49 MB - wavebox_10.125.28-2_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/softmaker-freeoffice-2024_1216-01_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">135.42 MB - softmaker-freeoffice-2024_1216-01_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/softmaker-freeoffice-2024_1218-01_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">135.42 MB - softmaker-freeoffice-2024_1218-01_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/thorium-browser_122.0.6261.132_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">132.79 MB - thorium-browser_122.0.6261.132_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/atom-amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">132.28 MB - atom-amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser_1.87.191_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">123.80 MB - brave-browser_1.87.191_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/opera-stable_109.0.5097.45_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">104.09 MB - opera-stable_109.0.5097.45_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/vivaldi-stable_6.6.3271.61-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">102.54 MB - vivaldi-stable_6.6.3271.61-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/google-chrome-stable_118.0.5993.117-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">99.24 MB - google-chrome-stable_118.0.5993.117-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/google-chrome-stable_117.0.5938.149-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">99.21 MB - google-chrome-stable_117.0.5938.149-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/google-chrome-stable_119.0.6045.199-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">99.05 MB - google-chrome-stable_119.0.6045.199-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/code_1.92.2-1723660989_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">97.76 MB - code_1.92.2-1723660989_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/vivaldi-stable_5.7.2921.68-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">96.88 MB - vivaldi-stable_5.7.2921.68-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/vs studio code_1.74.3-1673284829_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">93.46 MB - vs studio code_1.74.3-1673284829_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/slimjet_amd64_42.0.2.0.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">92.36 MB - slimjet_amd64_42.0.2.0.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/code_1.81.1-1691620686_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">91.87 MB - code_1.81.1-1691620686_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/google-chrome-stable_115.0.5790.98-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">91.43 MB - google-chrome-stable_115.0.5790.98-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/google-chrome-stable-111.0.5563.146-1.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">89.52 MB - google-chrome-stable-111.0.5563.146-1.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/slimjet_amd64_39.0.5.0.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">86.12 MB - slimjet_amd64_39.0.5.0.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/vivaldi-stable_5.0.2497.51-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">82.95 MB - vivaldi-stable_5.0.2497.51-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/freetube_0.23.13_beta_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">72.72 MB - freetube_0.23.13_beta_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/librewolf_125.0.1-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">66.85 MB - librewolf_125.0.1-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/Brackets.Release.1.14.1.64-bit.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">63.25 MB - Brackets.Release.1.14.1.64-bit.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/sublime-text_build-4180_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">14.81 MB - sublime-text_build-4180_amd64.deb</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/brave-browser</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser/brave-browser_1.64.122_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">110.51 MB - brave-browser_1.64.122_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser/brave-browser_1.62.165_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">109.63 MB - brave-browser_1.62.165_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser/brave-browser_1.63.174_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">109.58 MB - brave-browser_1.63.174_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser/brave-browser_1.60.125_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">105.50 MB - brave-browser_1.60.125_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser/brave-browser_1.51.114_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">102.94 MB - brave-browser_1.51.114_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser/brave-browser_1.26.74_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">82.19 MB - brave-browser_1.26.74_amd64.deb</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/MEGACMD</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD/megasync_5.9.0-7.1_amd64-ubuntu20.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">57.45 MB - megasync_5.9.0-7.1_amd64-ubuntu20.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD/megasync-xUbuntu_24.04_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">30.53 MB - megasync-xUbuntu_24.04_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD/megasync-xUbuntu_22.04_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">22.38 MB - megasync-xUbuntu_22.04_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD/megacmd_2.0.0-1.1_amd64-ubuntu20.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">18.16 MB - megacmd_2.0.0-1.1_amd64-ubuntu20.deb</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/NAVEGADORES_2024_LUBUNTU_22&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/NAVEGADORES_2024_LUBUNTU_22</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/NAVEGADORES_2024_LUBUNTU_22/microsoft-edge-stable_126.0.2592.102-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">160.38 MB - microsoft-edge-stable_126.0.2592.102-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/NAVEGADORES_2024_LUBUNTU_22/Yandex_24.6.1.853_beta_(64-bit).deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">159.03 MB - Yandex_24.6.1.853_beta_(64-bit).deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/NAVEGADORES_2024_LUBUNTU_22/brave-browser_1.67.123_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">112.29 MB - brave-browser_1.67.123_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/NAVEGADORES_2024_LUBUNTU_22/opera-stable_112.0.5197.24_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">106.02 MB - opera-stable_112.0.5197.24_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/NAVEGADORES_2024_LUBUNTU_22/vivaldi-stable_6.8.3381.46-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">103.21 MB - vivaldi-stable_6.8.3381.46-1_amd64.deb</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/microsoft-edge-stable_125.0.2535.92-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">160.14 MB - microsoft-edge-stable_125.0.2535.92-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/brave-browser_1.66.118_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">111.19 MB - brave-browser_1.66.118_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/opera-stable_110.0.5130.66_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">105.14 MB - opera-stable_110.0.5130.66_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/vivaldi-stable_6.7.3329.39-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">103.51 MB - vivaldi-stable_6.7.3329.39-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/code_1.90.0-1717531825_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">97.54 MB - code_1.90.0-1717531825_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/chromium_125.0.6422.141-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">71.00 MB - chromium_125.0.6422.141-1_amd64.deb</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.deb&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/wps-office_11.1.0.11691.XA_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">304.75 MB - wps-office_11.1.0.11691.XA_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/sejda-desktop_7.6.8_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">243.47 MB - sejda-desktop_7.6.8_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/sejda-desktop_7.5.6_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">233.91 MB - sejda-desktop_7.5.6_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/onlyoffice-desktopeditors_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">198.81 MB - onlyoffice-desktopeditors_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/microsoft-edge-stable_122.0.2365.63-1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">158.30 MB - microsoft-edge-stable_122.0.2365.63-1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/google-chrome-stable_123.0.6312.86.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">102.28 MB - google-chrome-stable_123.0.6312.86.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/google-chrome-stable-111.0.5563.146-1.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">89.52 MB - google-chrome-stable-111.0.5563.146-1.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/obsidian_1.5.8_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">74.98 MB - obsidian_1.5.8_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/google-chrome-stable_90.0.4430.72.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">74.15 MB - google-chrome-stable_90.0.4430.72.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/lubuntu_master-pdf-editor-5.9.10-qt5_included.x86_64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">27.18 MB - lubuntu_master-pdf-editor-5.9.10-qt5_included.x86_64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/2_master-pdf-editor-5.9.10-qt5.x86_64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">10.73 MB - 2_master-pdf-editor-5.9.10-qt5.x86_64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/libnss3_3.49.1-1ubuntu1_amd64.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">1.12 MB - libnss3_3.49.1-1ubuntu1_amd64.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/pdfshuffler_0.6.0-1_all.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">34.37 KB - pdfshuffler_0.6.0-1_all.deb</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/libu2f-udev_1.1.4-1_all.deb&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">3.62 KB - libu2f-udev_1.1.4-1_all.deb</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zip&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .zip - 19 arquivo(s) (Tamanho total: 1.36 GB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zip&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/freeoffice2024.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">209.07 MB - freeoffice2024.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/nextcloud-28.0.0.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">208.61 MB - nextcloud-28.0.0.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">3.28 MB - particao_sda4.zip</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zip&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/DownThemAll!-Chrome-Web-Store.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">935.73 KB - DownThemAll!-Chrome-Web-Store.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Bookmark-Import-Export-Chrome-Web-Store.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">704.80 KB - Bookmark-Import-Export-Chrome-Web-Store.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Link-Grabber-Chrome-Web-Store.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">673.94 KB - Link-Grabber-Chrome-Web-Store.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Global-Speed-Controle-de-velocidade-de-vídeo-Chrome-Web-Store.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">440.42 KB - Global-Speed-Controle-de-velocidade-de-vídeo-Chrome-Web-Store.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Multiple-Search-Engines-MSE-Chrome-Web-Store-2026.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">295.84 KB - Multiple-Search-Engines-MSE-Chrome-Web-Store-2026.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Bookmarks-Exporter-Chrome-Web-Store.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">12.42 KB - Bookmarks-Exporter-Chrome-Web-Store.zip</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zip&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/LibreOffice25.8.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">299.43 MB - LibreOffice25.8.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave_1.87.191.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">174.05 MB - brave_1.87.191.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/chrome-linux.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">101.42 MB - chrome-linux.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/editrocket5_0_2_linux_x64.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">46.22 MB - editrocket5_0_2_linux_x64.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/ventoy-1.1.05-windows.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">15.92 MB - ventoy-1.1.05-windows.zip</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zip&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/brave-browser</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/brave-browser/brave-browser-1.26.74-linux-amd64.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">115.54 MB - brave-browser-1.26.74-linux-amd64.zip</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zip&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM/Telegram-dados-tsetup.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">14.07 MB - Telegram-dados-tsetup.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM/Telegram A.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">11.61 MB - Telegram A.zip</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zip&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/pdfstudio2023.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">179.36 MB - pdfstudio2023.zip</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/DyAnnotationExtractor-1.4-dist.zip&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">9.52 MB - DyAnnotationExtractor-1.4-dist.zip</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.appimage&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .appimage - 9 arquivo(s) (Tamanho total: 1.27 GB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.appimage&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/Nextcloud-2.3.2-x86_64.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">24.07 MB - Nextcloud-2.3.2-x86_64.AppImage</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.appimage&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/DesktopEditors-x86_64.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">332.46 MB - DesktopEditors-x86_64.AppImage</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/Thorium_Browser_122.0.6261.132_SSE3.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">255.20 MB - Thorium_Browser_122.0.6261.132_SSE3.AppImage</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/ungoogled-chromium_123.0.6312.105-1.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">168.85 MB - ungoogled-chromium_123.0.6312.105-1.AppImage</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/balenaEtcher-1.19.21-x64.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">149.99 MB - balenaEtcher-1.19.21-x64.AppImage</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/LibreWolf.x86_64.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">110.55 MB - LibreWolf.x86_64.AppImage</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/balenaEtcher-1.18.11-x64.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">95.05 MB - balenaEtcher-1.18.11-x64.AppImage</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/Notable-1.8.4.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">69.05 MB - Notable-1.8.4.AppImage</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.appimage&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM/Telegram-A-x86_64.AppImage&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">95.50 MB - Telegram-A-x86_64.AppImage</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.gz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .gz - 11 arquivo(s) (Tamanho total: 970.21 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.gz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/wabdd-0.1.5.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">15.70 KB - wabdd-0.1.5.tar.gz</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.gz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/LibreOffice_5.4.7.2_Linux_x86-64_deb.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">267.51 MB - LibreOffice_5.4.7.2_Linux_x86-64_deb.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/LibreOffice_24.8.0_Linux_x86-64_deb.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">200.19 MB - LibreOffice_24.8.0_Linux_x86-64_deb.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/Apache_OpenOffice_4.1.15_Linux_x86-64_install-deb_en-US.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">158.50 MB - Apache_OpenOffice_4.1.15_Linux_x86-64_install-deb_en-US.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/ventoy-1.1.05-linux.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">19.12 MB - ventoy-1.1.05-linux.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/ventoy-1.0.99-linux.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">19.05 MB - ventoy-1.0.99-linux.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/ventoy-1.0.98-linux.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">18.92 MB - ventoy-1.0.98-linux.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/qlipper_5.1.1.orig.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">99.02 KB - qlipper_5.1.1.orig.tar.gz</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.gz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/Apache_OpenOffice_4.1.15_Linux_x86-64_install-deb_en-US.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">158.50 MB - Apache_OpenOffice_4.1.15_Linux_x86-64_install-deb_en-US.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/FoxitReader.enu.setup.2.4.5.0727.x64.run.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">70.39 MB - FoxitReader.enu.setup.2.4.5.0727.x64.run.tar.gz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/docear_linux.tar.gz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">57.92 MB - docear_linux.tar.gz</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.sh&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .sh - 3 arquivo(s) (Tamanho total: 887.05 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.sh&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/XodoPDFStudio_linux64-LUBUNTU_16.sh&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">530.29 MB - XodoPDFStudio_linux64-LUBUNTU_16.sh</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.sh&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/2-PDFStudio_linux64.sh&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">178.38 MB - 2-PDFStudio_linux64.sh</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/PDFStudio_linux64.sh&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">178.38 MB - PDFStudio_linux64.sh</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.xz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .xz - 7 arquivo(s) (Tamanho total: 613.04 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.xz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/firefox-142.0.1.tar.xz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">74.84 MB - firefox-142.0.1.tar.xz</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.xz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/mullvad-browser-linux-x86_64-14.5.4.tar.xz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">98.14 MB - mullvad-browser-linux-x86_64-14.5.4.tar.xz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/navegadores_lubuntu_22/floorp-linux-amd64.tar.xz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">79.96 MB - floorp-linux-amd64.tar.xz</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.xz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM/Telegram-tsetup.6.3.3.tar.xz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">60.47 MB - Telegram-tsetup.6.3.3.tar.xz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM/Telegram-tsetup.5.16.3.tar.xz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">58.80 MB - Telegram-tsetup.5.16.3.tar.xz</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.xz&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/tor-browser-linux-x86_64-13.0.11-lubuntu-25.tar.xz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">131.52 MB - tor-browser-linux-x86_64-13.0.11-lubuntu-25.tar.xz</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/tor-browser-linux-x86_64-13.0.11.tar.xz&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">109.31 MB - tor-browser-linux-x86_64-13.0.11.tar.xz</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.bz2&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .bz2 - 8 arquivo(s) (Tamanho total: 503.59 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.bz2&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/waterfox-G6.0.16.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">85.75 MB - waterfox-G6.0.16.tar.bz2</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/zen.linux-generic.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">83.63 MB - zen.linux-generic.tar.bz2</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/firefox-130.0.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">83.18 MB - firefox-130.0.tar.bz2</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/thunderbird-128.0.1esr.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">83.17 MB - thunderbird-128.0.1esr.tar.bz2</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/firefox-developer-135.0b5.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">70.22 MB - firefox-developer-135.0b5.tar.bz2</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/anki-2.0.52-amd64.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">30.05 MB - anki-2.0.52-amd64.tar.bz2</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/mousepad-0.6.2.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">1.34 MB - mousepad-0.6.2.tar.bz2</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.bz2&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/Zotero-6.0.35_linux-x86_64.tar.bz2&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">66.26 MB - Zotero-6.0.35_linux-x86_64.tar.bz2</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.run&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .run - 2 arquivo(s) (Tamanho total: 306.10 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.run&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/xampp-linux-x64-8.2.12-0-installer.run&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">153.05 MB - xampp-linux-x64-8.2.12-0-installer.run</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.run&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/xampp-linux-x64-8.2.12-0-installer.run&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">153.05 MB - xampp-linux-x64-8.2.12-0-installer.run</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zst&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .zst - 1 arquivo(s) (Tamanho total: 146.61 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.zst&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/anki-23.12.1-linux-qt6.tar.zst&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">146.61 MB - anki-23.12.1-linux-qt6.tar.zst</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.apk&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .apk - 1 arquivo(s) (Tamanho total: 35.15 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.apk&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/es-file-explorer-4-4-2-2-1.apk&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">35.15 MB - es-file-explorer-4-4-2-2-1.apk</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.bin&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .bin - 1 arquivo(s) (Tamanho total: 5.12 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.bin&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/unetbootin-linux64-702.bin&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">5.12 MB - unetbootin-linux64-702.bin</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.jar&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .jar - 2 arquivo(s) (Tamanho total: 2.95 MB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.jar&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/pdfhex.jar&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">2.94 MB - pdfhex.jar</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/DyAnnotationExtractor-1.4-binary.jar&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">17.97 KB - DyAnnotationExtractor-1.4-binary.jar</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.png&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .png - 5 arquivo(s) (Tamanho total: 880.44 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.png&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/xubuntu-1.png&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">191.13 KB - xubuntu-1.png</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/xubuntu-4.png&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">177.96 KB - xubuntu-4.png</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/xubuntu-5.png&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">174.23 KB - xubuntu-5.png</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/xubuntu-3.png&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">171.37 KB - xubuntu-3.png</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/xubuntu-2.png&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">165.75 KB - xubuntu-2.png</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.html&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .html - 13 arquivo(s) (Tamanho total: 775.03 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.html&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/assistir_multishow.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">200.34 KB - assistir_multishow.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/radioantena1.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">118.81 KB - radioantena1.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/encontrar_fotos_explorar_do_instagram.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">22.67 KB - encontrar_fotos_explorar_do_instagram.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/embed_instagram.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">18.22 KB - embed_instagram.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/embed_instagram_com_9xbuddy.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">18.21 KB - embed_instagram_com_9xbuddy.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/extrair link dos filmes redecanais.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">11.90 KB - extrair link dos filmes redecanais.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/video-youtube-local.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">6.04 KB - video-youtube-local.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/obter_imagem_miniatura_vídeo_do_tik_tok_6_9xbud.com.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">4.60 KB - obter_imagem_miniatura_vídeo_do_tik_tok_6_9xbud.com.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/redecanais.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">3.28 KB - redecanais.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/separador_links-urls.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">3.09 KB - separador_links-urls.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/video_m3u8.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">2.37 KB - video_m3u8.html</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Bookmarks&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.html&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4/Bookmarks</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Bookmarks/historico.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">323.61 KB - historico.html</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/Bookmarks/bookmarks_5_5_25.html&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">41.88 KB - bookmarks_5_5_25.html</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.jpg&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .jpg - 6 arquivo(s) (Tamanho total: 556.60 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.jpg&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/screen.jpg&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">117.00 KB - screen.jpg</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/screen01.jpg&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">92.89 KB - screen01.jpg</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/app_screen04.jpg&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">92.67 KB - app_screen04.jpg</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/app_screen06.jpg&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">87.16 KB - app_screen06.jpg</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/app_screen05.jpg&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">85.73 KB - app_screen05.jpg</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/windows10microsoft-MOVER/screen02.jpg&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">81.15 KB - screen02.jpg</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .txt - 25 arquivo(s) (Tamanho total: 401.20 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/info_aniversario.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">506 bytes - info_aniversario.txt</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX/COMANDOS-VOIDLINUX-RCLONE-2.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">3.45 KB - COMANDOS-VOIDLINUX-RCLONE-2.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX/script identificar e completar 130vezes sinal de igual.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">2.35 KB - script identificar e completar 130vezes sinal de igual.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX/versao2 - script identificar e completar 130vezes sinal de igual.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">2.09 KB - versao2 - script identificar e completar 130vezes sinal de igual.txt</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/arquivos-da-pasta-meus_arquivos.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">1010 bytes - arquivos-da-pasta-meus_arquivos.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/script-shell-listar-arquivos.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">509 bytes - script-shell-listar-arquivos.txt</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/filmeredecanais.html.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">106.42 KB - filmeredecanais.html.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/link pesquisa google.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">91.13 KB - link pesquisa google.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/1.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">86.95 KB - 1.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/link pesquisa google-2.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">70.41 KB - link pesquisa google-2.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/php-instalar_php.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">7.41 KB - php-instalar_php.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/1000_comandos_de_personalização_do_lubuntu16.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">4.72 KB - 1000_comandos_de_personalização_do_lubuntu16.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/1fazeramor.html.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">4.10 KB - 1fazeramor.html.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/instalar Python-3.10.13.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">2.35 KB - instalar Python-3.10.13.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/buscar miniatura tiktok.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">1.30 KB - buscar miniatura tiktok.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/lista_sistema_operacional_arquivos.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">1.28 KB - lista_sistema_operacional_arquivos.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/razorsql_pelo_terminal.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">1.08 KB - razorsql_pelo_terminal.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/nmcli.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">885 bytes - nmcli.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/pid.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">745 bytes - pid.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/tv e filmes redecanais.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">116 bytes - tv e filmes redecanais.txt</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4/node-python-php</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/requisito.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">696 bytes - requisito.txt</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/MEGACMD</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD/comandos megacmd.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">6.18 KB - comandos megacmd.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/MEGACMD/voidlinux.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">5.07 KB - voidlinux.txt</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.txt&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM/Telegram-A-x86_64-AppImage.txt&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">457 bytes - Telegram-A-x86_64-AppImage.txt</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/TELEGRAM/TELEGRAM VOIDLINUX.TXT&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">101 bytes - TELEGRAM VOIDLINUX.TXT</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.ods&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .ods - 1 arquivo(s) (Tamanho total: 28.64 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.ods&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4/node-python-php</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/apagar_depois_amor.ods&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">28.64 KB - apagar_depois_amor.ods</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.conf&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .conf - 3 arquivo(s) (Tamanho total: 19.06 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.conf&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX/3-rclone.conf&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">7.57 KB - 3-rclone.conf</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/COMANDOS_RCLONE_VOID-LINUX/2-rclone.conf&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">5.40 KB - 2-rclone.conf</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.conf&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/rclone-4.conf&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">6.10 KB - rclone-4.conf</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.js&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .js - 5 arquivo(s) (Tamanho total: 8.63 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.js&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/localhost_nodejs_server.js&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">2.13 KB - localhost_nodejs_server.js</li>
+        </ul>
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.js&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4/node-python-php</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/4node.js&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">2.67 KB - 4node.js</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/3node.js&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">1.95 KB - 3node.js</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/2node.js&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">994 bytes - 2node.js</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/node.js&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">928 bytes - node.js</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.xlsx&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .xlsx - 1 arquivo(s) (Tamanho total: 7.92 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.xlsx&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/app.xlsx&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">7.92 KB - app.xlsx</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.py&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .py - 3 arquivo(s) (Tamanho total: 2.25 KB)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.py&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/misterio de papai/particao_sda4/node-python-php</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/3amor.py&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">830 bytes - 3amor.py</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/2amor.py&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">787 bytes - 2amor.py</li>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/misterio de papai/particao_sda4/node-python-php/amor.py&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">691 bytes - amor.py</li>
+        </ul>
+    </ol>
+</li></div>
+
+<div class="grupo-tipo">
+    <li><h2 class="tipo-cabecalho" data-comando="rclone copy &quot;amor_fazer_amor:&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.csv&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 Tipo: .csv - 1 arquivo(s) (Tamanho total: 844 bytes)</h2>
+    <ol class="lista-pastas-ordenada">
+        <li class="pasta-agrupada" data-comando="rm -rf &quot;/home/GOOGLE-DRIVE/VIADO&quot;/* &amp;&amp; rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --include &quot;*.csv&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">📁 navegadores.office2024/PASTA-PRINCIPAL</li>
+        <ul>
+        <li class="arquivo" data-comando="rclone copy amor_fazer_amor:&quot;navegadores.office2024/PASTA-PRINCIPAL/1_arquivos_meus_arquivos.csv&quot; &quot;/home/GOOGLE-DRIVE/VIADO&quot; --progress" onclick="copiarParaClipboard(this, this.getAttribute('data-comando'))">844 bytes - 1_arquivos_meus_arquivos.csv</li>
+        </ul>
+    </ol>
+</li></div>
+
+    <script>
+    function copiarParaClipboard(elemento, texto) {
+        navigator.clipboard.writeText(texto).then(() => {
+            elemento.classList.add('arquivo-copiado');
+            const alerta = document.getElementById('alerta-copia');
+            alerta.style.display = 'block';
+            setTimeout(() => { alerta.style.display = 'none'; elemento.classList.remove('arquivo-copiado'); }, 2000);
+        });
+    }
+    </script>
+
+
+</ol></body></html>
