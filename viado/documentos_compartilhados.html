@@ -1,15 +1,22 @@
 <html lang="pt-BR"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentos Compartilhados - Google Drive</title>
+    <title>Documentos Compartilhados - Google Drive (Específicos)</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: #1e293b;
             background-color: #f8fafc;
             margin: 0;
-            padding: 24px;
-            line-height: 1.5;
+            padding: 16px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
         }
         .header {
             background: linear-gradient(135deg, #3b82f6, #1d4ed8);
@@ -21,7 +28,7 @@
         }
         .header h1 {
             margin: 0 0 8px 0;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
         }
         .header p {
@@ -32,100 +39,108 @@
         .command-box {
             background-color: #1e293b;
             color: #e2e8f0;
-            padding: 16px;
+            padding: 14px;
             border-radius: 8px;
             font-family: monospace;
-            font-size: 13px;
+            font-size: 12px;
             margin-bottom: 24px;
             overflow-x: auto;
             border-left: 4px solid #3b82f6;
+            word-break: break-all;
         }
-        .table-container {
+        .category-card {
             background: white;
             border-radius: 12px;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            padding: 20px;
+            margin-bottom: 20px;
             border: 1px solid #e2e8f0;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            font-size: 14px;
-        }
-        th {
-            background-color: #f1f5f9;
-            color: #475569;
+        .category-card h2 {
+            margin-top: 0;
+            font-size: 16px;
             font-weight: 600;
-            padding: 12px 16px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        td {
-            padding: 12px 16px;
-            border-bottom: 1px solid #f1f5f9;
-        }
-        tr:last-child td {
-            border-bottom: none;
-        }
-        tr:hover {
-            background-color: #f8fafc;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
         }
         .badge {
             display: inline-block;
-            padding: 4px 8px;
+            padding: 2px 8px;
             border-radius: 4px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
         }
         .badge-docx { background-color: #dbeafe; color: #1e40af; }
         .badge-xlsx { background-color: #dcfce7; color: #166534; }
         .badge-pptx { background-color: #ffedd5; color: #9a3412; }
-        .badge-default { background-color: #f1f5f9; color: #475569; }
         
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background-color: #3b82f6;
-            color: white;
-            padding: 6px 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 500;
-            transition: background-color 0.2s;
+        .document-list {
+            margin: 0;
+            padding-left: 20px;
         }
-        .btn:hover {
-            background-color: #2563eb;
+        .document-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #f1f5f9;
+            font-size: 14px;
+        }
+        .document-list li:last-child {
+            border-bottom: none;
+        }
+        .file-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            word-break: break-word;
+        }
+        .file-link:hover {
+            text-decoration: underline;
+            color: #1d4ed8;
+        }
+        .file-id {
+            color: #64748b;
+            font-size: 12px;
+            margin-left: 6px;
+            font-family: monospace;
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 8px;
+            }
+            .header {
+                padding: 16px;
+            }
+            .header h1 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Documentos Compartilhados</h1>
-        <p>Listagem dinâmica de arquivos DOCX, XLSX e PPTX obtidos via Rclone com links diretos para visualização no Google Drive.</p>
-    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Documentos Compartilhados</h1>
+            <p>Classificados com rotas específicas por tipo no Google Drive.</p>
+        </div>
 
-    <div class="command-box">
-        <strong>Comando Rclone utilizado:</strong><br>
-        rclone lsjson "amor_fazer_amor:Pasta de DOCUMENTOS COMPARTILHADOS/" --include "*.{docx,xlsx,pptx}" --files-only
-    </div>
+        <div class="command-box">
+            <strong>Comando Rclone utilizado:</strong><br>
+            rclone lsjson "amor_fazer_amor:Pasta de DOCUMENTOS COMPARTILHADOS/" --include "*.{docx,xlsx,pptx}" --files-only
+        </div>
 
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome do Arquivo</th>
-                    <th>Extensão</th>
-                    <th>ID do Google Drive</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td><strong>6.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>16Js4rLKraQIbdl5HWY8OuiWRp9qsAF9Rt346T_-RN2Q</code></td><td><a href="https://drive.google.com/file/d/16Js4rLKraQIbdl5HWY8OuiWRp9qsAF9Rt346T_-RN2Q/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>Apresentação sem título NO TERRA DE PAPAI.pptx</strong></td><td><span class="badge badge-pptx">PPTX</span></td><td><code>1JPaFiMdniZNSzKjo9Ec753oagh2H1j2yvqr9w4YFY4E</code></td><td><a href="https://drive.google.com/file/d/1JPaFiMdniZNSzKjo9Ec753oagh2H1j2yvqr9w4YFY4E/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>documentos.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>1ch-6LV_rbpOfXsKS-wkx9pC34dx_pQTpykUwjHhFxR0</code></td><td><a href="https://drive.google.com/file/d/1ch-6LV_rbpOfXsKS-wkx9pC34dx_pQTpykUwjHhFxR0/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>fazer amor.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>1FkAo-aGDRoCQQVzwygJQhFAyMPHT2FU-OgljTrbxDw0</code></td><td><a href="https://drive.google.com/file/d/1FkAo-aGDRoCQQVzwygJQhFAyMPHT2FU-OgljTrbxDw0/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>fazer amor.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>1KamSAwDncRInmW9D_43KTO6yVeXfxkPvJS0XxMHIoXE</code></td><td><a href="https://drive.google.com/file/d/1KamSAwDncRInmW9D_43KTO6yVeXfxkPvJS0XxMHIoXE/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>fazer amor.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>16D9YivNQ99IfSj7pBuaDuC13mfIjZP8PXgCx3FfWGXE</code></td><td><a href="https://drive.google.com/file/d/16D9YivNQ99IfSj7pBuaDuC13mfIjZP8PXgCx3FfWGXE/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>foto do orkut_takeout-20140916T010823Z.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>12jKs85HG_UW6VCP5ql4h52B3KcJ03O4kY33uJ1_Ky1s</code></td><td><a href="https://drive.google.com/file/d/12jKs85HG_UW6VCP5ql4h52B3KcJ03O4kY33uJ1_Ky1s/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>multarescisoria.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>1pm4fZVzTZ3EQ_-7BRIDanEOTjBCLU4Jtj49OMl5XHPY</code></td><td><a href="https://drive.google.com/file/d/1pm4fZVzTZ3EQ_-7BRIDanEOTjBCLU4Jtj49OMl5XHPY/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>pasta jefferson no sistema watt_os.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>1ZTEBjyFYDQNMutlFannNQbhhuuJOX3n5Kls1IrnrPXw</code></td><td><a href="https://drive.google.com/file/d/1ZTEBjyFYDQNMutlFannNQbhhuuJOX3n5Kls1IrnrPXw/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr><tr><td><strong>só_extensões_e_favoritos.docx</strong></td><td><span class="badge badge-docx">DOCX</span></td><td><code>15ZOwIxxApGwBlJNto1f8E37Z8UiBrIp5Dnf0TmGfB9c</code></td><td><a href="https://drive.google.com/file/d/15ZOwIxxApGwBlJNto1f8E37Z8UiBrIp5Dnf0TmGfB9c/preview" target="_blank" class="btn">Abrir no Drive (Preview)</a></td></tr>
-            </tbody>
-        </table>
+        
+        <div class="category-card">
+            <h2>Documentos de Texto (Documents) <span class="badge badge-docx">DOCUMENT</span></h2>
+            <ol class="document-list">
+                <li><a href="https://docs.google.com/document/d/16Js4rLKraQIbdl5HWY8OuiWRp9qsAF9Rt346T_-RN2Q/preview" target="_blank" class="file-link">6.docx</a> <span class="file-id">(ID: 16Js4rLKraQIbdl5HWY8OuiWRp9qsAF9Rt346T_-RN2Q)</span></li><li><a href="https://docs.google.com/document/d/1JPaFiMdniZNSzKjo9Ec753oagh2H1j2yvqr9w4YFY4E/preview" target="_blank" class="file-link">Apresentação sem título NO TERRA DE PAPAI.pptx</a> <span class="file-id">(ID: 1JPaFiMdniZNSzKjo9Ec753oagh2H1j2yvqr9w4YFY4E)</span></li><li><a href="https://docs.google.com/document/d/1ch-6LV_rbpOfXsKS-wkx9pC34dx_pQTpykUwjHhFxR0/preview" target="_blank" class="file-link">documentos.docx</a> <span class="file-id">(ID: 1ch-6LV_rbpOfXsKS-wkx9pC34dx_pQTpykUwjHhFxR0)</span></li><li><a href="https://docs.google.com/document/d/1FkAo-aGDRoCQQVzwygJQhFAyMPHT2FU-OgljTrbxDw0/preview" target="_blank" class="file-link">fazer amor.docx</a> <span class="file-id">(ID: 1FkAo-aGDRoCQQVzwygJQhFAyMPHT2FU-OgljTrbxDw0)</span></li><li><a href="https://docs.google.com/document/d/1KamSAwDncRInmW9D_43KTO6yVeXfxkPvJS0XxMHIoXE/preview" target="_blank" class="file-link">fazer amor.docx</a> <span class="file-id">(ID: 1KamSAwDncRInmW9D_43KTO6yVeXfxkPvJS0XxMHIoXE)</span></li><li><a href="https://docs.google.com/document/d/16D9YivNQ99IfSj7pBuaDuC13mfIjZP8PXgCx3FfWGXE/preview" target="_blank" class="file-link">fazer amor.docx</a> <span class="file-id">(ID: 16D9YivNQ99IfSj7pBuaDuC13mfIjZP8PXgCx3FfWGXE)</span></li><li><a href="https://docs.google.com/document/d/12jKs85HG_UW6VCP5ql4h52B3KcJ03O4kY33uJ1_Ky1s/preview" target="_blank" class="file-link">foto do orkut_takeout-20140916T010823Z.docx</a> <span class="file-id">(ID: 12jKs85HG_UW6VCP5ql4h52B3KcJ03O4kY33uJ1_Ky1s)</span></li><li><a href="https://docs.google.com/document/d/1pm4fZVzTZ3EQ_-7BRIDanEOTjBCLU4Jtj49OMl5XHPY/preview" target="_blank" class="file-link">multarescisoria.docx</a> <span class="file-id">(ID: 1pm4fZVzTZ3EQ_-7BRIDanEOTjBCLU4Jtj49OMl5XHPY)</span></li><li><a href="https://docs.google.com/document/d/1ZTEBjyFYDQNMutlFannNQbhhuuJOX3n5Kls1IrnrPXw/preview" target="_blank" class="file-link">pasta jefferson no sistema watt_os.docx</a> <span class="file-id">(ID: 1ZTEBjyFYDQNMutlFannNQbhhuuJOX3n5Kls1IrnrPXw)</span></li><li><a href="https://docs.google.com/document/d/15ZOwIxxApGwBlJNto1f8E37Z8UiBrIp5Dnf0TmGfB9c/preview" target="_blank" class="file-link">só_extensões_e_favoritos.docx</a> <span class="file-id">(ID: 15ZOwIxxApGwBlJNto1f8E37Z8UiBrIp5Dnf0TmGfB9c)</span></li>
+            </ol>
+        </div>
+        
     </div>
 
 
